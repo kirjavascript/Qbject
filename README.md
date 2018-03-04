@@ -1,5 +1,7 @@
 Optional object chaining with ES6 Proxys
 
+You should use [this](https://www.npmjs.com/package/babel-plugin-transform-optional-chaining) or [this](https://github.com/tc39/proposal-optional-chaining) instead if you can
+
 Install
 ---
 
