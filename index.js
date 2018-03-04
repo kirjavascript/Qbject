@@ -15,7 +15,7 @@
                     return target;
                 }
                 else {
-                    let clone = {...obj};
+                    let clone = Object.assign({}, obj);
                     const proxy = new Proxy(clone, {
                         get(target, key) {
                             if (key == 'valueOf') {
