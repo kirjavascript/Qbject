@@ -1,6 +1,3 @@
-Qbject
-===
-
 Optional object chaining with ES6 Proxys
 
 Install
