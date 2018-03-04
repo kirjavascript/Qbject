@@ -29,7 +29,6 @@ qbj1.foo = 'data';
 
 console.log(qbj1.foo.valueOf); // prints 'data'
 console.log(qbj1.bar.bar.baz.valueOf); // prints 'undefined'
-console.log(qbj1.foo.valueOf); // prints 'data'
 
 const qbj2 = new Qbject({foo: 'test'}, 'something');
 
