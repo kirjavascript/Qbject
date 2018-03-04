@@ -1,0 +1,18 @@
+{
+  "name": "Qbject",
+  "description": "Optional object chaining with ES6 Proxys",
+  "homepage": "https://github.com/krambuhl/npm-module-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests/*.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:krambuhl/npm-module-boilerplate.git"
+  },
+  "devDependencies": {
+    "tap-spec": "^2.1.2",
+    "tape": "^3.0.3"
+  }
+}
