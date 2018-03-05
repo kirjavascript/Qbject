@@ -36,13 +36,13 @@
                             let target = obj[rootkey];
                             path.push(key); // add the leaf
                             path.forEach((cd, i) => {
-                                if (typeof target[cd] != 'object') {
-                                    target[cd] = {};
-                                }
                                 if (i == path.length - 1) {
                                     target[cd] = value;
                                 }
                                 else {
+                                    if (typeof target[cd] != 'object') {
+                                        target[cd] = {};
+                                    }
                                     target = target[cd];
                                 }
                             });

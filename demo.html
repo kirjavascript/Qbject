@@ -9,24 +9,25 @@
         <script src="index.js"></script>
         <script>
 
-            const qbj1 = new Qbject();
+const obj1 = Qbject();
 
-            console.log(qbj1.bar.bar.baz._); // 'undefined'
+console.log(obj1.bar.bar.baz._); // 'undefined'
 
-            qbj1.arbitrary.deep.mutation = true;
+obj1.arbitrary.deep.mutation = true;
 
-            console.log(qbj1._); // {"arbitrary":{"deep":{"mutation":true}}}
+console.log(obj1._); // {"arbitrary":{"deep":{"mutation":true}}}
 
-            qbj1.foo = 'data';
+obj1.foo = 'data';
 
-            console.log(qbj1.foo._); // 'data'
+console.log(obj1.foo._); // 'data'
 
-            const qbj2 = new Qbject({foo: 'test'}, 'something');
+const obj2 = Qbject({foo: 'test'}, 'something');
 
-            console.log(qbj2._); // { foo: 'test' }
-            console.log(qbj2.foo._); // 'test'
-            console.log(qbj2.bar._); // 'something'
-            console.log(qbj2.bar.bar._); // 'something'
+console.log(obj2._); // { foo: 'test' }
+console.log(obj2.foo._); // 'test'
+console.log(obj2.bar._); // 'something'
+console.log(obj2.bar.bar._); // 'something'
+
         </script>
     </body>
 </html>
