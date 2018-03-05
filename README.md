@@ -1,6 +1,6 @@
 Optional object chaining with ES6 Proxys
 
-You should use [this](https://www.npmjs.com/package/babel-plugin-transform-optional-chaining) or [this](https://github.com/tc39/proposal-optional-chaining) instead if you can
+You could use [this](https://lodash.com/docs/4.17.4#get) or [this](https://www.npmjs.com/package/babel-plugin-transform-optional-chaining) or [this](https://github.com/tc39/proposal-optional-chaining) instead
 
 Install
 ---
@@ -9,10 +9,12 @@ Install
 $ yarn add qbject
 ```
 
-Docs
+Params
 ---
 
-Qbject(<i>object to wrap</i>, <i>default value</i>)
+    object to wrap ({})
+    default value (undefined)
+    unwrap key ('_')
 
 Exports a global 'Qbject' when dumped in your page as a script tag
 
