@@ -1,10 +1,10 @@
 Optional object chaining & creation with ES6 Proxys
 
-You could use [this](https://lodash.com/docs/4.17.4#get) or [this](https://www.npmjs.com/package/babel-plugin-transform-optional-chaining) or [this](https://github.com/tc39/proposal-optional-chaining) instead if you just need optional chaining.
-
-On setting a value, creates objects when they don't already exist.
+Arbitrary property access with a default value. When setting a property, missing objects in the chain are created automatically.
 
 Exports a global 'Qbject' when dumped in your page as a script tag.
+
+You could use [this](https://lodash.com/docs/4.17.4#get) or [this](https://www.npmjs.com/package/babel-plugin-transform-optional-chaining) or [this](https://github.com/tc39/proposal-optional-chaining) instead if you just need optional chaining.
 
 Install
 ---
@@ -24,7 +24,7 @@ Examples
 ---
 
 ```javascript
-const qbj1 = new Qbject();
+const qbj1 = Qbject();
 
 console.log(qbj1.bar.bar.baz._); // 'undefined'
 
@@ -36,7 +36,7 @@ qbj1.foo = 'data';
 
 console.log(qbj1.foo._); // 'data'
 
-const qbj2 = new Qbject({foo: 'test'}, 'something');
+const qbj2 = Qbject({foo: 'test'}, 'something');
 
 console.log(qbj2._); // { foo: 'test' }
 console.log(qbj2.foo._); // 'test'
