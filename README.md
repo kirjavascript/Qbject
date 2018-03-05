@@ -26,13 +26,13 @@ const qbj1 = new Qbject();
 
 qbj1.foo = 'data';
 
-console.log(qbj1.foo.valueOf); // prints 'data'
-console.log(qbj1.bar.bar.baz.valueOf); // prints 'undefined'
+console.log(qbj1.foo._); // prints 'data'
+console.log(qbj1.bar.bar.baz._); // prints 'undefined'
 
 const qbj2 = new Qbject({foo: 'test'}, 'something');
 
-console.log(qbj2.valueOf); // prints { foo: 'test' }
-console.log(qbj2.foo.valueOf); // prints 'test'
-console.log(qbj2.bar.valueOf); // prints 'something'
-console.log(qbj2.bar.bar.valueOf); // prints 'something'
+console.log(qbj2._); // prints { foo: 'test' }
+console.log(qbj2.foo._); // prints 'test'
+console.log(qbj2.bar._); // prints 'something'
+console.log(qbj2.bar.bar._); // prints 'something'
 ```

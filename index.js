@@ -8,17 +8,17 @@
   }
 }(typeof self !== 'undefined' ? self : this, function () {
 
-    return function(obj = {}, _default = void 0) {
+    return function(obj = {}, _default = void 0, valueKey = '_') {
         return new Proxy(obj, {
             get(target, key) {
-                if (key == 'valueOf') {
+                if (key == valueKey) {
                     return target;
                 }
                 else {
                     let clone = Object.assign({}, obj);
                     const proxy = new Proxy(clone, {
                         get(target, key) {
-                            if (key == 'valueOf') {
+                            if (key == valueKey) {
                                 return clone;
                             }
                             else {
