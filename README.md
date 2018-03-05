@@ -24,22 +24,24 @@ Examples
 ---
 
 ```javascript
-const qbj1 = Qbject();
+import Qbject from 'qbject';
 
-console.log(qbj1.bar.bar.baz._); // 'undefined'
+const obj1 = Qbject();
 
-qbj1.arbitrary.deep.mutation = true;
+console.log(obj1.bar.bar.baz._); // 'undefined'
 
-console.log(qbj1._); // {"arbitrary":{"deep":{"mutation":true}}}
+obj1.arbitrary.deep.mutation = true;
 
-qbj1.foo = 'data';
+console.log(obj1._); // {"arbitrary":{"deep":{"mutation":true}}}
 
-console.log(qbj1.foo._); // 'data'
+obj1.foo = 'data';
 
-const qbj2 = Qbject({foo: 'test'}, 'something');
+console.log(obj1.foo._); // 'data'
 
-console.log(qbj2._); // { foo: 'test' }
-console.log(qbj2.foo._); // 'test'
-console.log(qbj2.bar._); // 'something'
-console.log(qbj2.bar.bar._); // 'something'
+const obj2 = Qbject({foo: 'test'}, 'something');
+
+console.log(obj2._); // { foo: 'test' }
+console.log(obj2.foo._); // 'test'
+console.log(obj2.bar._); // 'something'
+console.log(obj2.bar.bar._); // 'something'
 ```

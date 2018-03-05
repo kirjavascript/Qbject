@@ -2,7 +2,7 @@
   "name": "qbject",
   "description": "Optional object chaining & creation with ES6 Proxys",
   "homepage": "https://github.com/kirjavascript/qbject",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "main": "index.js",
   "repository": {
     "type": "git",
