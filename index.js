@@ -15,15 +15,15 @@
                     return target;
                 }
                 else {
-                    let clone = Object.assign({}, obj);
+                    let objReference = obj;
                     const path = [];
-                    const proxy = new Proxy(clone, {
+                    const proxy = new Proxy(objReference, {
                         get(target, key) {
                             if (key == valueKey) {
-                                return clone;
+                                return objReference;
                             }
                             else {
-                                clone = clone ? clone[key] || _default : _default;
+                                objReference = objReference ? objReference[key] || _default : _default;
                                 path.push(key)
                                 return proxy;
                             }
