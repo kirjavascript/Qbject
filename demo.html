@@ -11,20 +11,22 @@
 
             const qbj1 = new Qbject();
 
+            console.log(qbj1.bar.bar.baz._); // 'undefined'
+
+            qbj1.arbitrary.deep.mutation = true;
+
+            console.log(qbj1._); // {"arbitrary":{"deep":{"mutation":true}}}
+
             qbj1.foo = 'data';
 
-            console.log(qbj1.foo._); // prints 'data'
-            console.log(qbj1.bar.bar.baz._); // prints 'undefined'
+            console.log(qbj1.foo._); // 'data'
 
             const qbj2 = new Qbject({foo: 'test'}, 'something');
 
-            console.log(qbj2._); // prints { foo: 'test' }
-            console.log(qbj2.foo._); // prints 'test'
-            console.log(qbj2.bar._); // prints 'something'
-            console.log(qbj2.bar.bar._); // prints 'something'
-
-            console.log(qbj2._); // prints { foo: 'test' }
-            console.log(qbj2.bar._); // prints 'something'
+            console.log(qbj2._); // { foo: 'test' }
+            console.log(qbj2.foo._); // 'test'
+            console.log(qbj2.bar._); // 'something'
+            console.log(qbj2.bar.bar._); // 'something'
         </script>
     </body>
 </html>
