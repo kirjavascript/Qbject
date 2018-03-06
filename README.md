@@ -4,7 +4,7 @@ Arbitrary property access with a default value. When setting a property, missing
 
 Exports a global 'Qbject' when dumped in your page as a script tag.
 
-You could use [this](https://lodash.com/docs/4.17.4#get) or [this](https://www.npmjs.com/package/babel-plugin-transform-optional-chaining) or [this](https://github.com/tc39/proposal-optional-chaining) instead if you just need optional chaining.
+You could use [this](https://lodash.com/docs/4.17.4#get), [this](https://www.npmjs.com/package/babel-plugin-transform-optional-chaining) or [this](https://github.com/tc39/proposal-optional-chaining) instead if you just need optional chaining.
 
 Install
 ---
@@ -28,6 +28,7 @@ import Qbject from 'qbject';
 
 const obj1 = Qbject();
 
+console.log(obj1._); // {}
 console.log(obj1.bar.bar.baz._); // 'undefined'
 
 obj1.arbitrary.deep.mutation = true;
